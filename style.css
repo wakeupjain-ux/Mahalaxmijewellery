@@ -1,0 +1,260 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #FFFFF0; /* Ivory */
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header Styles */
+.header {
+  background-color: #D4AF37; /* Gold */
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header .store-name {
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.header .tagline {
+  color: #FFF8DC; /* Light Gold/Champagne */
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+.nav-menu li {
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #B8860B; /* Darker Gold */
+}
+
+/* Mobile Navigation */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  height: 3px;
+  width: 25px;
+  background: #FFFFFF;
+  margin-bottom: 4px;
+  border-radius: 2px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(
+      rgba(212,175,55,0.5),
+      rgba(244, 232, 189, 0.7)
+    ),
+    url('hero-bg.jpg') no-repeat center center/cover;
+  color: #4B2E05; /* Dark Brown */
+  height: 400px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.hero-content {
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #D4AF37;
+  background-color: #FFF8DC;
+  border: 2px solid #D4AF37;
+  border-radius: 35px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #D4AF37;
+  color: #FFF8DC;
+}
+
+/* Section Styles */
+section {
+  padding: 60px 0;
+}
+
+h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  color: #B8860B;
+  text-align: center;
+  font-weight: 700;
+}
+
+.about p,
+.services ul,
+.contact address {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 15px auto 0;
+  text-align: center;
+  color: #3B2B0A;
+}
+
+.services ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.services li {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-bottom: 1px dotted #D4AF37;
+  font-weight: 600;
+}
+
+/* Reviews Section */
+.reviews .btn-large {
+  font-size: 1.3rem;
+  padding: 15px 40px;
+  margin: 15px auto 40px;
+  display: block;
+  max-width: 300px;
+  border-radius: 50px;
+}
+
+.testimonials {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background-color: #FFF8DC;
+  border: 1px solid #D4AF37;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #4B2E05;
+}
+
+.testimonial p {
+  font-size: 1.1rem;
+  color: #B8860B;
+  margin-bottom: 10px;
+}
+
+.testimonial blockquote {
+  margin: 0 0 15px;
+}
+
+/* Contact Section */
+.contact address {
+  line-height: 1.8;
+  font-style: normal;
+  color: #4B2E05;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background-color: #D4AF37;
+  color: #FFF8DC;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #D4AF37;
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    border-radius: 10px;
+    width: 200px;
+    padding: 15px 0;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    margin: 10px 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
