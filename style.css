@@ -26,12 +26,16 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header .store-name {
   font-size: 2.5rem;
   color: #FFFFFF;
   font-weight: bold;
+  margin-left: 20px;
 }
 
 .header .tagline {
@@ -40,6 +44,7 @@ body {
   font-size: 1.1rem;
 }
 
+/* Navigation */
 .nav {
   display: flex;
   align-items: center;
@@ -48,7 +53,7 @@ body {
 .nav-menu {
   list-style: none;
   display: flex;
-  margin-left: auto;
+  margin-right: 20px;
 }
 
 .nav-menu li {
@@ -71,13 +76,15 @@ body {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  margin-right: 20px;
+  z-index: 101;
 }
 
 .nav-toggle span {
   height: 3px;
   width: 25px;
   background: #FFFFFF;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   border-radius: 2px;
 }
 
@@ -99,6 +106,7 @@ body {
 
 .hero-content {
   width: 100%;
+  padding: 0 20px;
 }
 
 .hero-title {
@@ -228,33 +236,42 @@ h2 {
   .nav-menu {
     display: none;
     flex-direction: column;
-    background-color: #D4AF37;
-    position: absolute;
-    top: 75px;
+    position: fixed;
+    top: 65px;
     right: 20px;
+    background-color: #FFFFF0; /* ivory */
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
     border-radius: 10px;
+    padding: 20px;
     width: 200px;
-    padding: 15px 0;
+    z-index: 1000;
   }
 
   .nav-menu.active {
     display: flex;
   }
 
-  .nav-menu li {
-    margin: 10px 0;
-  }
-
   .nav-toggle {
     display: flex;
-    margin-left: auto;
+  }
+
+  .nav-link {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    color: #B8860B; /* dark gold */
+  }
+
+  .nav-link:hover {
+    color: #D4AF37;
   }
 
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem !important;
+    padding: 0 20px;
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+    font-size: 1rem !important;
+    padding: 0 20px;
   }
 }
